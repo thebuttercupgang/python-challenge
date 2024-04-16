@@ -39,25 +39,19 @@ with open(path, mode="r") as budget:
         changes.append(row[1] - prev)
         prev = row[1]
 
+#pop off the inital value bc it's not a difference
 #find the index of the min and max values to pull from Date list
-    #this is honestly bulky, but not using pandas
+    #this is honestly bulky, but i don't think we're supposed to do this pandas
+del changes[0]
 max_index = changes.index(max(changes))
 min_index = changes.index(min(changes))
 
-#okay results now, storing in dictionary
+#okay results now, exporting to .txt file
 
-Financial_Analysis = {
-    "Total Months": len(months),
-    "Total": sum(profits),
-    "Average Change": sum(changes) / len(changes),
-    "Greatest Increase in Profits": {
-        "Date": months[max_index],
-        "Value": max(changes)
-    },
-    "Greatest Decrease in Profits": {
-        "Date": months[min_index],
-        "Value": min(changes)
-    },
-
-}
-Financial_Analysis
+file = open("analysis.txt", "w")
+file.write(f'Total Months: {len(months)}')
+file.write("\n" + f'Total: {sum(profits)}')
+file.write("\n" + f'Average Change: {sum(changes) / len(changes)}')
+file.write("\n" + f'Greatest Increase in Profits: {max(changes)} on {months[max_index]}')
+file.write("\n" + f'Greatest Decrease in Profits: {min(changes)} on {months[min_index]}')
+file.close()
