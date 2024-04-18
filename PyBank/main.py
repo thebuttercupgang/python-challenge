@@ -14,9 +14,7 @@ import csv
 path = os.path.join('C:\\', 'Users', '54qb3', 'Documents', 'python-challenge', 'PyBank', "Resources", "budget_data.csv")
 
 #create lists to hold the values:
-months = []
-profits = []
-changes = []
+months, profits, changes = [], [], []
 
 ##making it readable
 with open(path, mode="r") as budget:
@@ -39,12 +37,12 @@ with open(path, mode="r") as budget:
         changes.append(row[1] - prev)
         prev = row[1]
 
-#pop off the inital value bc it's not a difference
 #find the index of the min and max values to pull from Date list
     #this is honestly bulky, but i don't think we're supposed to do this pandas
-del changes[0]
 max_index = changes.index(max(changes))
 min_index = changes.index(min(changes))
+#delete the inital value bc it's not a difference
+del changes[0]
 
 #okay results now, exporting to .txt file
 

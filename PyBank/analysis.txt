@@ -1,5 +1,5 @@
 Total Months: 86
 Total: 22564198
 Average Change: -8311.105882352942
-Greatest Increase in Profits: 1862002 on Jul-16
-Greatest Decrease in Profits: -1825558 on Jan-14
+Greatest Increase in Profits: 1862002 on Aug-16
+Greatest Decrease in Profits: -1825558 on Feb-14

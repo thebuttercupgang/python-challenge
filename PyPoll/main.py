@@ -5,23 +5,13 @@
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
 # The winner of the election based on popular vote
-# Your analysis should align with the following results:
-# Election Results
-# -------------------------
-# Total Votes: 369711
-# -------------------------
-# Charles Casper Stockham: 23.049% (85213)
-# Diana DeGette: 73.812% (272892)
-# Raymon Anthony Doane: 3.139% (11606)
-# -------------------------
-# Winner: Diana DeGette
-# -------------------------
-
+#---------------------------------------------------------------------------------------------------
 
 #import modules necessary to read csv
 import os
 import csv
 
+#variables to hold the lists
 total_votes, candidates = [], []
 candidate1, candidate2, candidate3 = [], [], []
 
@@ -50,16 +40,29 @@ with open(path, mode="r") as election:
         else:
             candidate3.append(row[0])
 
-print(candidates)
-
+#The results:
 # The total number of votes cast
+len(total_votes)
 # A complete list of candidates who received votes
+candidates
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
+    #candidate 1
+len(candidate1) / len(total_votes)
+len(candidate1)
+    #candidate 2
+len(candidate2) / len(total_votes)
+len(candidate2)
+    #candidate 3
+len(candidate3) / len(total_votes)
+len(candidate3)
 # The winner of the election based on popular vote
+candidates[1]
 
+#printing results to text file:
 file = open("analysis.txt", "w")
 file.write(f"Total Votes: {len(total_votes)}")
+file.write("\n" + f"The candidates are: {candidates}")
 file.write("\n" + f"Candidates: {candidates}")
 file.write("\n" + f"{candidates[0]} won {len(candidate1) / len(total_votes): .3%} of the vote, {len(candidate1)} votes")
 file.write("\n" + f"{candidates[1]} won {len(candidate2) / len(total_votes): .3%} of the vote, {len(candidate2)} votes")
