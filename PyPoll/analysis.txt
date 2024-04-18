@@ -1,0 +1,6 @@
+Total Votes: 369711
+Candidates: ['Charles Casper Stockham', 'Diana DeGette', 'Raymon Anthony Doane']
+Charles Casper Stockham won  23.049% of the vote, 85213 votes
+Diana DeGette won  73.812% of the vote, 272892 votes
+Raymon Anthony Doane won  3.139% of the vote, 11606 votes
+Diana DeGette won the election based on the popular vote
