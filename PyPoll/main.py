@@ -62,7 +62,6 @@ candidates[1]
 #printing results to text file:
 file = open("analysis.txt", "w")
 file.write(f"Total Votes: {len(total_votes)}")
-file.write("\n" + f"The candidates are: {candidates}")
 file.write("\n" + f"Candidates: {candidates}")
 file.write("\n" + f"{candidates[0]} won {len(candidate1) / len(total_votes): .3%} of the vote, {len(candidate1)} votes")
 file.write("\n" + f"{candidates[1]} won {len(candidate2) / len(total_votes): .3%} of the vote, {len(candidate2)} votes")
